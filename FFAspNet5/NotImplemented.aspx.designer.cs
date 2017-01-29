@@ -11,7 +11,7 @@ namespace FFAspNet5
 {
 
 
-    public partial class About
+    public partial class NotImplemented
     {
     }
 }

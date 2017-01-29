@@ -103,20 +103,41 @@
       <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
     </Reference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="About.aspx" />
+    <Content Include="App_Data\RecipesDB.mdf" />
+    <Content Include="App_Data\RecipesDB_log.ldf">
+      <DependentUpon>RecipesDB.mdf</DependentUpon>
+    </Content>
     <Content Include="Contact.aspx" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\background.gif" />
+    <Content Include="Content\Images\bg-spaghetti.jpg" />
+    <Content Include="Content\Images\Food\cereal-clip.jpg" />
+    <Content Include="Content\Images\Food\egg-clip.jpg" />
+    <Content Include="Content\Images\Food\fishsticks-mine.jpg" />
+    <Content Include="Content\Images\Food\hamburger-clip.jpg" />
+    <Content Include="Content\Images\Food\icecream-clip.jpg" />
+    <Content Include="Content\Images\Food\macaroni-clip.jpg" />
+    <Content Include="Content\Images\Food\meatballs-clip.jpg" />
+    <Content Include="Content\Images\Food\pasta-clip.jpg" />
+    <Content Include="Content\Images\Food\pasta2-clip.jpg" />
+    <Content Include="Content\Images\Food\pizza-clip.jpg" />
+    <Content Include="Content\Images\Food\sallad-clip.jpg" />
+    <Content Include="Content\Images\Food\sandwich-clip.jpg" />
+    <Content Include="Content\Images\Food\sandwich2-clip.jpg" />
+    <Content Include="Content\Images\Food\waffles-clip.jpg" />
+    <Content Include="Content\Images\masthead.gif" />
+    <Content Include="Content\Images\Unavailable.jpg" />
     <Content Include="Content\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="DisplayRecipe.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="NotImplemented.aspx" />
+    <Content Include="RandomRecipe.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -146,17 +167,14 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
-    <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Site.Mobile.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -166,13 +184,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -188,28 +199,37 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DisplayRecipe.aspx.cs">
+      <DependentUpon>DisplayRecipe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisplayRecipe.aspx.designer.cs">
+      <DependentUpon>DisplayRecipe.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="NotImplemented.aspx.cs">
+      <DependentUpon>NotImplemented.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NotImplemented.aspx.designer.cs">
+      <DependentUpon>NotImplemented.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomRecipe.aspx.cs">
+      <DependentUpon>RandomRecipe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RandomRecipe.aspx.designer.cs">
+      <DependentUpon>RandomRecipe.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.cs">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.designer.cs">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-    </Compile>
-    <Compile Include="ViewSwitcher.ascx.cs">
-      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="ViewSwitcher.ascx.designer.cs">
-      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

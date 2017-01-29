@@ -1,42 +1,29 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="FFAspNet5._Default" %>
-
-<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
-    <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="FFAspNet5.Default" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="mainContentPlaceHolder" runat="server">
+    <div class="box">
+        <div class="leftboxcontent">
+            <h2><a href="NotImplemented">Search for recipes</a></h2>
+            Search our database for your favorite recipes.&nbsp; We have recipes for every
+            occasion and taste.
+        </div>
+        <div class="rightboximage"><img src="Content/Images/food/egg-clip.jpg" width="200px" height="130px" alt="Recipe search"/></div>
     </div>
-
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-            </p>
-        </div>
+    <div class="box">
+        <div class="rightboxcontent">
+            <h2><a href="RandomRecipe">I feel lucky</a></h2>
+            If you are completely out of ideas, we will come up with a recipe idea for you.</div>
+            <div class="leftboximage"><img src="Content/Images/food/waffles-clip.jpg" width="200px" height="130px" alt="Random recipe"/></div>
     </div>
-
+    <div class="box">
+        <div class="leftboxcontent">
+            <h2><a href="NotImplemented">Weekly Menu</a></h2>
+            Tired of deciding what to eat for dinner? Get some ideas from our weekly menu.</div>
+            <div class="rightboximage"><img src="Content/Images/food/pizza-clip.jpg" width="200px" height="130px" alt="Weekly menu"/></div>
+    </div>
+    <div class="box">
+        <div class="rightboxcontent">
+            <h2><a href="NotImplemented">Top Recipes</a></h2>
+            See what recipes other users tagged as their favorites</div>
+            <div class="leftboximage"><img src="Content/Images/food/icecream-clip.jpg" width="200px" height="130px" alt="Top Recipes"/></div>
+    </div>
 </asp:Content>
