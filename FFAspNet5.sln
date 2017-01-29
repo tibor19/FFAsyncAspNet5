@@ -5,6 +5,13 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFAspNet5", "FFAspNet5\FFAspNet5.csproj", "{D11A914F-AA9A-4A49-89B4-9CCBEE797F00}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFAspNet5.WebTest", "FFAspNet5.WebTest\FFAspNet5.WebTest.csproj", "{18C4C755-C967-4C87-8345-6370645CD55B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0997EE07-9D70-41EB-ABF9-A49CCC77B2BC}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +22,10 @@ Global
 		{D11A914F-AA9A-4A49-89B4-9CCBEE797F00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D11A914F-AA9A-4A49-89B4-9CCBEE797F00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D11A914F-AA9A-4A49-89B4-9CCBEE797F00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18C4C755-C967-4C87-8345-6370645CD55B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18C4C755-C967-4C87-8345-6370645CD55B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18C4C755-C967-4C87-8345-6370645CD55B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18C4C755-C967-4C87-8345-6370645CD55B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
