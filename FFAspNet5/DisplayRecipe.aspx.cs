@@ -22,7 +22,7 @@ namespace FFAspNet5
             int recipeId = 0;
             if (Int32.TryParse(Request.QueryString["ID"], out recipeId) && recipeId != 0)
             {
-                lblMethod.Text = "AddOnPreRenderCompleteAsync";
+                lblMethod.Text = "RegisterAsyncTask";
                 GetDetails(recipeId);
                 GetIngredients(recipeId);
                 GetInstructions(recipeId);
@@ -46,7 +46,7 @@ namespace FFAspNet5
             cmd.Parameters.AddWithValue("@RecipeID", recipeId);
 
             // for ASP.NET 2.0 applications use delegates instead of lamdba expressions
-            AddOnPreRenderCompleteAsync(
+            Page.RegisterAsyncTask(new PageAsyncTask(
                 (sender, eventArg, callback, state) => cmd.BeginExecuteReader(callback, state), // beginHandler
                 ar => { // endHandler
 
@@ -61,7 +61,10 @@ namespace FFAspNet5
                         }
                     }
                     conn.Close();
-                });
+                },
+                null, // timeoutHandler
+                null // state
+                ));
         }
 
         private void GetIngredients(int recipeId)
@@ -73,7 +76,7 @@ namespace FFAspNet5
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@RecipeID", recipeId);
 
-            AddOnPreRenderCompleteAsync(
+            Page.RegisterAsyncTask(new PageAsyncTask(
                 (sender, eventArg, callback, state) => cmd.BeginExecuteReader(callback, state), // beginHandler
                 ar => { // endHandler
                     using (SqlDataReader reader = cmd.EndExecuteReader(ar))
@@ -82,7 +85,10 @@ namespace FFAspNet5
                         lstRecipeIngredients.DataBind();
                     }
                     conn.Close();
-                });
+                },
+                null, // timeoutHandler
+                null // state
+                ));
         }
 
         private void GetInstructions(int recipeId)
@@ -94,7 +100,7 @@ namespace FFAspNet5
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@RecipeID", recipeId);
 
-            AddOnPreRenderCompleteAsync(
+            Page.RegisterAsyncTask(new PageAsyncTask(
                 (sender, eventArg, callback, state) => cmd.BeginExecuteReader(callback, state), // beginHandler
                 ar => { // endHandler
                     using (SqlDataReader reader = cmd.EndExecuteReader(ar))
@@ -103,7 +109,10 @@ namespace FFAspNet5
                         lstRecipeInstructions.DataBind();
                     }
                     conn.Close();
-                });
+                },
+                null, // timeoutHandler
+                null // state
+                ));
         }
     }
 }
