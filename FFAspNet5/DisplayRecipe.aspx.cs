@@ -24,9 +24,10 @@ namespace FFAspNet5
             if (Int32.TryParse(Request.QueryString["ID"], out recipeId) && recipeId != 0)
             {
                 lblMethod.Text = "PageAsyncTask with Task";
-                Page.RegisterAsyncTask(new PageAsyncTask(() => GetDetailsAsync(recipeId)));
-                Page.RegisterAsyncTask(new PageAsyncTask(() => GetIngredientsAsync(recipeId)));
-                Page.RegisterAsyncTask(new PageAsyncTask(() => GetInstructionsAsync(recipeId)));
+                Page.RegisterAsyncTask(new PageAsyncTask(() => Task.WhenAll(
+                    GetDetailsAsync(recipeId),
+                    GetIngredientsAsync(recipeId),
+                    GetInstructionsAsync(recipeId))));
             }
         }
 
