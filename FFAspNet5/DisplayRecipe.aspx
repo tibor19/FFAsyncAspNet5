@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="DisplayRecipe.aspx.cs" Inherits="FFAspNet5.DisplayRecipe" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="DisplayRecipe.aspx.cs" Inherits="FFAspNet5.DisplayRecipe" Async="true" AsyncTimeout="60" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="mainContentPlaceHolder" runat="server">
     <h2><asp:Literal ID="RecipeName" runat="server" Text="Sorry recipe not found"/></h2>
         <span style="font-size: large">
